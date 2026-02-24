@@ -45,31 +45,34 @@
   </div>
   </header>  
   
-  
+   
 
-   <hr class="my-5 ">
-    <main class="">
+    <hr class="my-5 ">
+    <main id="main" class="">
        <h2 class="text-neutral font-bold  text-[26px]">Available Jobs</h2>
         <div class="mb-6 mt-[20px] ">
-            <button class="bg-blue-500 border-2 rounded-md border-gray-200  text-white px-[33px] py-[10px]" onclick="toggleStyle('all-btn')" id="all-btn">All</button>
+            <button class="bg-blue-500 border-2 rounded-md border-gray-200 border-blue-300 text-white px-[33px] py-[10px]" onclick="toggleStyle('all-btn')" id="all-btn">All</button>
             <button class="border-2 rounded-md border-gray-200 px-[13px] py-[10px] text-[#64748B]" onclick="toggleStyle('Interview-btn')" id="Interview-btn">Interview</button>
             <button class=" border-2 rounded-md border-gray-200 px-[13px] py-[10px]  text-[#64748B]" onclick="toggleStyle('Rejected-btn')" id="Rejected-btn">Rejected</button>
         </div>
     
+         <section id="filtered-section" >
 
-        <section id="all-card" class="mt-[26px] ">
+    </section>
+    
+        <section id="all-card" class="mt-[26px] space-y-6">
        
 
              <div class="flex justify-between shadow-md p-[24px]">
               <div>
-                <h3 class="text-[#002C5C] text-[26px] font-bold">Mobile First Corp</h3>
-              <p class="text-[#64748B]">React Native Developer</p>
-              <p class="text-[#64748B] mt-[20px] mb-[20px]">Remote • Full-time • $130,000 - $175,000</p>
-              <p  class="text-green-500 mt-[20px] mb-[20px] w-[170px] px-[10px] py-[3px] text-[17px] border-2">Not applicable</p>
-              <p class="text-[#64748B] mt-[20px] mb-[20px]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                <h3 class="mobile text-[#002C5C] text-[26px] font-bold">Mobile First Corp 1</h3>
+              <p class="React text-[#64748B]">React Native Developer</p>
+              <p class="Remote text-[#64748B] mt-[20px] mb-[20px]">Remote • Full-time • $130,000 - $175,000</p>
+              <p  class=" applicable text-green-500 mt-[20px] mb-[20px] w-[140px] px-[10px] py-[3px] text-[17px] border-2">Not applicable</p>
+              <p class="Build text-[#64748B] mt-[20px] mb-[20px]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
               <div>
-              <button class="text-green-500 px-[10px] py-[3px] text-[17px] border-2">interview</button>
-              <button class="text-red-500 px-[10px] py-[3px] text-[17px] border-2" >Rejected</button>
+              <button class="text-green-500 px-[10px] py-[3px] text-[17px] border-2 interviewButton">interview</button>
+              <button class="text-red-500 px-[10px] py-[3px] text-[17px] border-2 RejectedButton"  >Rejected</button>
               </div>
               </div>
                <div class="w-8 h-8 flex justify-center rounded-full border-[#64748B] border-2"><button><i class="fa-solid fa-trash "></i></button></i></div>
@@ -78,106 +81,106 @@
 
 
 
-              <div class="flex justify-between shadow-md mt-[40px]  p-[24px] ">
+              <div class="flex justify-between shadow-md p-[24px]">
               <div>
-                <h3 class="text-[#002C5C] text-[26px] font-bold">Mobile First Corp</h3>
-              <p class="text-[#64748B]">React Native Developer</p>
-              <p class="text-[#64748B] mt-[20px] mb-[20px]">Remote • Full-time • $130,000 - $175,000</p>
-              <p  class="text-green-500 mt-[20px] mb-[20px] w-[170px] px-[10px] py-[3px] text-[17px] border-2">Not applicable</p>
-              <p class="text-[#64748B] mt-[20px] mb-[20px]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                <h3 class="mobile text-[#002C5C] text-[26px] font-bold">Mobile First Corp 2</h3>
+              <p class="React text-[#64748B]">React Native Developer</p>
+              <p class="Remote text-[#64748B] mt-[20px] mb-[20px]">Remote • Full-time • $130,000 - $175,000</p>
+              <p  class=" applicable text-green-500 mt-[20px] mb-[20px] w-[140px] px-[10px] py-[3px] text-[17px] border-2">Not applicable</p>
+              <p class="Build text-[#64748B] mt-[20px] mb-[20px]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
               <div>
-              <button class="text-green-500 px-[10px] py-[3px] text-[17px] border-2">interview</button>
-              <button class="text-red-500 px-[10px] py-[3px] text-[17px] border-2" >Rejected</button>
+              <button class="text-green-500 px-[10px] py-[3px] text-[17px] border-2 interviewButton">interview</button>
+              <button class="text-red-500 px-[10px] py-[3px] text-[17px] border-2 RejectedButton"  >Rejected</button>
               </div>
               </div>
                <div class="w-8 h-8 flex justify-center rounded-full border-[#64748B] border-2"><button><i class="fa-solid fa-trash "></i></button></i></div>
              </div>
 
-             <div class="flex justify-between shadow-md mt-[40px]  p-[24px] ">
+             <div class="flex justify-between shadow-md p-[24px]">
               <div>
-                <h3 class="text-[#002C5C] text-[26px] font-bold">Mobile First Corp</h3>
-              <p class="text-[#64748B]">React Native Developer</p>
-              <p class="text-[#64748B] mt-[20px] mb-[20px]">Remote • Full-time • $130,000 - $175,000</p>
-              <p  class="text-green-500 mt-[20px] mb-[20px] w-[170px] px-[10px] py-[3px] text-[17px] border-2">Not applicable</p>
-              <p class="text-[#64748B] mt-[20px] mb-[20px]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                <h3 class="mobile text-[#002C5C] text-[26px] font-bold">Mobile First Corp 3</h3>
+              <p class="React text-[#64748B]">React Native Developer0</p>
+              <p class="Remote text-[#64748B] mt-[20px] mb-[20px]">Remote • Full-time • $130,000 - $175,000</p>
+              <p  class=" applicable text-green-500 mt-[20px] mb-[20px] w-[140px] px-[10px] py-[3px] text-[17px] border-2">Not applicable</p>
+              <p class="Build text-[#64748B] mt-[20px] mb-[20px]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
               <div>
-              <button class="text-green-500 px-[10px] py-[3px] text-[17px] border-2">interview</button>
-              <button class="text-red-500 px-[10px] py-[3px] text-[17px] border-2" >Rejected</button>
+              <button class="text-green-500 px-[10px] py-[3px] text-[17px] border-2 interviewButton">interview</button>
+              <button class="text-red-500 px-[10px] py-[3px] text-[17px] border-2 RejectedButton"  >Rejected</button>
               </div>
               </div>
                <div class="w-8 h-8 flex justify-center rounded-full border-[#64748B] border-2"><button><i class="fa-solid fa-trash "></i></button></i></div>
              </div>
 
-             <div class="flex justify-between shadow-md mt-[40px]  p-[24px] ">
+            <div class="flex justify-between shadow-md p-[24px]">
               <div>
-                <h3 class="text-[#002C5C] text-[26px] font-bold">Mobile First Corp</h3>
-              <p class="text-[#64748B]">React Native Developer</p>
-              <p class="text-[#64748B] mt-[20px] mb-[20px]">Remote • Full-time • $130,000 - $175,000</p>
-              <p  class="text-green-500 mt-[20px] mb-[20px] w-[170px] px-[10px] py-[3px] text-[17px] border-2">Not applicable</p>
-              <p class="text-[#64748B] mt-[20px] mb-[20px]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                <h3 class="mobile text-[#002C5C] text-[26px] font-bold">Mobile First Corp 4</h3>
+              <p class="React text-[#64748B]">React Native Developer0</p>
+              <p class="Remote text-[#64748B] mt-[20px] mb-[20px]">Remote • Full-time • $130,000 - $175,000</p>
+              <p  class=" applicable text-green-500 mt-[20px] mb-[20px] w-[140px] px-[10px] py-[3px] text-[17px] border-2">Not applicable</p>
+              <p class="Build text-[#64748B] mt-[20px] mb-[20px]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
               <div>
-              <button class="text-green-500 px-[10px] py-[3px] text-[17px] border-2">interview</button>
-              <button class="text-red-500 px-[10px] py-[3px] text-[17px] border-2" >Rejected</button>
+              <button class="text-green-500 px-[10px] py-[3px] text-[17px] border-2 interviewButton">interview</button>
+              <button class="text-red-500 px-[10px] py-[3px] text-[17px] border-2 RejectedButton"  >Rejected</button>
               </div>
               </div>
                <div class="w-8 h-8 flex justify-center rounded-full border-[#64748B] border-2"><button><i class="fa-solid fa-trash "></i></button></i></div>
              </div>
 
-             <div class="flex justify-between shadow-md mt-[40px]  p-[24px] ">
+             <div class="flex justify-between shadow-md p-[24px]">
               <div>
-                <h3 class="text-[#002C5C] text-[26px] font-bold">Mobile First Corp</h3>
-              <p class="text-[#64748B]">React Native Developer</p>
-              <p class="text-[#64748B] mt-[20px] mb-[20px]">Remote • Full-time • $130,000 - $175,000</p>
-              <p  class="text-green-500 mt-[20px] mb-[20px] w-[170px] px-[10px] py-[3px] text-[17px] border-2">Not applicable</p>
-              <p class="text-[#64748B] mt-[20px] mb-[20px]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                <h3 class="mobile text-[#002C5C] text-[26px] font-bold">Mobile First Corp 5</h3>
+              <p class="React text-[#64748B]">React Native Developer0</p>
+              <p class="Remote text-[#64748B] mt-[20px] mb-[20px]">Remote • Full-time • $130,000 - $175,000</p>
+              <p  class=" applicable text-green-500 mt-[20px] mb-[20px] w-[140px] px-[10px] py-[3px] text-[17px] border-2">Not applicable</p>
+              <p class="Build text-[#64748B] mt-[20px] mb-[20px]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
               <div>
-              <button class="text-green-500 px-[10px] py-[3px] text-[17px] border-2">interview</button>
-              <button class="text-red-500 px-[10px] py-[3px] text-[17px] border-2" >Rejected</button>
+              <button class="text-green-500 px-[10px] py-[3px] text-[17px] border-2 interviewButton">interview</button>
+              <button class="text-red-500 px-[10px] py-[3px] text-[17px] border-2 RejectedButton"  >Rejected</button>
+              </div>
+              </div>
+               <div class="w-8 h-8 flex justify-center rounded-full border-[#64748B] border-2"><button><i class="fa-solid fa-trash "></i></button></i></div>
+             </div>
+             
+             <div class="flex justify-between shadow-md p-[24px]">
+              <div>
+                <h3 class="mobile text-[#002C5C] text-[26px] font-bold">Mobile First Corp 6</h3>
+              <p class="React text-[#64748B]">React Native Developer0</p>
+              <p class="Remote text-[#64748B] mt-[20px] mb-[20px]">Remote • Full-time • $130,000 - $175,000</p>
+              <p  class=" applicable text-green-500 mt-[20px] mb-[20px] w-[140px] px-[10px] py-[3px] text-[17px] border-2">Not applicable</p>
+              <p class="Build text-[#64748B] mt-[20px] mb-[20px]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+              <div>
+              <button class="text-green-500 px-[10px] py-[3px] text-[17px] border-2 interviewButton">interview</button>
+              <button class="text-red-500 px-[10px] py-[3px] text-[17px] border-2 RejectedButton"  >Rejected</button>
+              </div>
+              </div>
+               <div class="w-8 h-8 flex justify-center rounded-full border-[#64748B] border-2"><button><i class="fa-solid fa-trash "></i></button></i></div>
+             </div>
+             
+            <div class="flex justify-between shadow-md p-[24px]">
+              <div>
+                <h3 class="mobile text-[#002C5C] text-[26px] font-bold">Mobile First Corp 7</h3>
+              <p class="React text-[#64748B]">React Native Developer0</p>
+              <p class="Remote text-[#64748B] mt-[20px] mb-[20px]">Remote • Full-time • $130,000 - $175,000</p>
+              <p  class=" applicable text-green-500 mt-[20px] mb-[20px] w-[140px] px-[10px] py-[3px] text-[17px] border-2">Not applicable</p>
+              <p class="Build text-[#64748B] mt-[20px] mb-[20px]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+              <div>
+              <button class="text-green-500 px-[10px] py-[3px] text-[17px] border-2 interviewButton">interview</button>
+              <button class="text-red-500 px-[10px] py-[3px] text-[17px] border-2 RejectedButton"  >Rejected</button>
               </div>
               </div>
                <div class="w-8 h-8 flex justify-center rounded-full border-[#64748B] border-2"><button><i class="fa-solid fa-trash "></i></button></i></div>
              </div>
 
-             <div class="flex justify-between shadow-md mt-[40px]  p-[24px] ">
+             <div class="flex justify-between shadow-md p-[24px]">
               <div>
-                <h3 class="text-[#002C5C] text-[26px] font-bold">Mobile First Corp</h3>
-              <p class="text-[#64748B]">React Native Developer</p>
-              <p class="text-[#64748B] mt-[20px] mb-[20px]">Remote • Full-time • $130,000 - $175,000</p>
-              <p  class="text-green-500 mt-[20px] mb-[20px] w-[170px] px-[10px] py-[3px] text-[17px] border-2">Not applicable</p>
-              <p class="text-[#64748B] mt-[20px] mb-[20px]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                <h3 class="mobile text-[#002C5C] text-[26px] font-bold">Mobile First Corp 8</h3>
+              <p class="React text-[#64748B]">React Native Developer0</p>
+              <p class="Remote text-[#64748B] mt-[20px] mb-[20px]">Remote • Full-time • $130,000 - $175,000</p>
+              <p  class=" applicable text-green-500 mt-[20px] mb-[20px] w-[140px] px-[10px] py-[3px] text-[17px] border-2">Not applicable</p>
+              <p class="Build text-[#64748B] mt-[20px] mb-[20px]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
               <div>
-              <button class="text-green-500 px-[10px] py-[3px] text-[17px] border-2">interview</button>
-              <button class="text-red-500 px-[10px] py-[3px] text-[17px] border-2" >Rejected</button>
-              </div>
-              </div>
-               <div class="w-8 h-8 flex justify-center rounded-full border-[#64748B] border-2"><button><i class="fa-solid fa-trash "></i></button></i></div>
-             </div>
-
-             <div class="flex justify-between shadow-md mt-[40px]  p-[24px] ">
-              <div>
-                <h3 class="text-[#002C5C] text-[26px] font-bold">Mobile First Corp</h3>
-              <p class="text-[#64748B]">React Native Developer</p>
-              <p class="text-[#64748B] mt-[20px] mb-[20px]">Remote • Full-time • $130,000 - $175,000</p>
-              <p  class="text-green-500 mt-[20px] mb-[20px] w-[170px] px-[10px] py-[3px] text-[17px] border-2">Not applicable</p>
-              <p class="text-[#64748B] mt-[20px] mb-[20px]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
-              <div>
-              <button class="text-green-500 px-[10px] py-[3px] text-[17px] border-2">interview</button>
-              <button class="text-red-500 px-[10px] py-[3px] text-[17px] border-2" >Rejected</button>
-              </div>
-              </div>
-               <div class="w-8 h-8 flex justify-center rounded-full border-[#64748B] border-2"><button><i class="fa-solid fa-trash "></i></button></i></div>
-             </div>
-
-             <div class="flex justify-between shadow-md mt-[40px]  p-[24px] ">
-              <div>
-                <h3 class="text-[#002C5C] text-[26px] font-bold">Mobile First Corp</h3>
-              <p class="text-[#64748B]">React Native Developer</p>
-              <p class="text-[#64748B] mt-[20px] mb-[20px]">Remote • Full-time • $130,000 - $175,000</p>
-              <p  class="text-green-500 mt-[20px] mb-[20px] w-[170px] px-[10px] py-[3px] text-[17px] border-2">Not applicable</p>
-              <p class="text-[#64748B] mt-[20px] mb-[20px]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
-              <div>
-              <button class="text-green-500 px-[10px] py-[3px] text-[17px] border-2">interview</button>
-              <button class="text-red-500 px-[10px] py-[3px] text-[17px] border-2" >Rejected</button>
+              <button class="text-green-500 px-[10px] py-[3px] text-[17px] border-2 interviewButton">interview</button>
+              <button class="text-red-500 px-[10px] py-[3px] text-[17px] border-2 RejectedButton"  >Rejected</button>
               </div>
               </div>
                <div class="w-8 h-8 flex justify-center rounded-full border-[#64748B] border-2"><button><i class="fa-solid fa-trash "></i></button></i></div>
