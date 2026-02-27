@@ -36,20 +36,22 @@
     <main id="main">
         <div class="flex justify-between items-end">     
             <h2 class="text-neutral font-bold text-[26px]">Available Jobs</h2>
-            <span id="job-count" class="text-gray-400 text-[20px] mb-1 mr-[20px]">0</span>
+            <p  class="text-gray-400 text-[20px] mb-1 mr-[20px]"><span id="job-count">o</span> Jobs</p>
         </div>
 
         <div class="flex gap-3 mb-8 mt-[20px]">
-            <button id="all-btn" onclick="toggleStyle('all-btn')" class="bg-blue-600 text-white px-8 py-2.5 rounded-md font-semibold transition-all duration-300">All</button>
-            <button id="Interview-btn" onclick="toggleStyle('Interview-btn')" class="border-2 border-gray-200 px-6 py-2.5 rounded-md text-[#64748B] font-semibold transition-all duration-300 ">Interview</button>
-            <button id="Rejected-btn" onclick="toggleStyle('Rejected-btn')" class="border-2 border-gray-200 px-6 py-2.5 rounded-md text-[#64748B] font-semibold transition-all duration-300 ">Rejected</button>
+            <button id="tab-all" onclick="switchTab('all')" class="bg-blue-600 border-2 border-gray-200 text-white px-8 py-2.5 rounded-md font-semibold transition-all duration-300">All</button>
+            <button id="tab-interview" onclick="switchTab('interview')" class="border-2 border-gray-200 px-6 py-2.5 rounded-md text-[#64748B] font-semibold transition-all duration-300 ">Interview</button>
+            <button id="tab-rejected" onclick="switchTab('rejected')" class="border-2 border-gray-200 px-6 py-2.5  rounded-md text-[#64748B] font-semibold transition-all duration-300 ">Rejected</button>
         </div>
     
-        <section id="filtered-section" class="hidden space-y-6"></section>
+       
     
-        <section id="all-card" class="space-y-6">
-            <div class="flex justify-between bg-white shadow-md p-6 rounded-xl border border-gray-100 transition-all duration-300 hover:shadow-lg">
-                <div class="flex-1">
+        <div id="job-container">
+        <section id="all-container" class="space-y-6 hidden">
+            
+            <div  class="flex logo justify-between  bg-white shadow-md p-6 rounded-xl border border-gray-100 transition-all duration-300 hover:shadow-lg ">
+                <div class="">
                     <h3 class="mobile text-[#002C5C] text-[24px] font-bold">Mobile First Corp </h3>
                     <p class="React text-[#64748B] font-medium">React Native Developer</p>
                     <p class="Remote text-[#64748B] mt-2 mb-2 text-sm italic">Remote • Full-time • $130k - $175k</p>
@@ -60,11 +62,12 @@
                         <button class="RejectedButton px-4 py-1.5 text-sm font-bold border-2 border-red-500 text-red-500 rounded-md hover:bg-red-500 hover:text-white transition-all duration-300 uppercase">REJECTED</button>
                     </div>
                 </div>
-                <button class="deleteBtn self-start w-10 h-10 flex items-center justify-center rounded-full border-2 border-gray-200 text-gray-400 hover:text-red-500 hover:border-red-500 transition-all duration-300"><i class="fa-solid fa-trash-can"></i></button>
+                <button class="deleteButton self-start w-10 h-10 flex items-center justify-center rounded-full border-2 border-gray-200 text-gray-400 hover:text-red-500 hover:border-red-500 transition-all duration-300"><i class="fa-solid fa-trash-can deleteButton"></i></button>
             </div>
+            
 
-            <div class="flex justify-between bg-white shadow-md p-6 rounded-xl border border-gray-100 transition-all duration-300 hover:shadow-lg">
-                <div class="flex-1">
+             <div class="flex logo justify-between bg-white shadow-md p-6 rounded-xl border border-gray-100 transition-all duration-300 hover:shadow-lg">
+                <div class="">
                     <h3 class="mobile text-[#002C5C] text-[24px] font-bold">WebFlow Agency</h3>
                     <p class="React text-[#64748B] font-medium">Web Designer & Developer</p>
                     <p class="Remote text-[#64748B] mt-2 mb-2 text-sm italic">Los Angeles, CA• Part-time • $80,000 - $120,000/p>
@@ -75,10 +78,10 @@
                         <button class="RejectedButton px-4 py-1.5 text-sm font-bold border-2 border-red-500 text-red-500 rounded-md hover:bg-red-500 hover:text-white transition-all duration-300 uppercase">REJECTED</button>
                     </div>
                 </div>
-                <button class="deleteBtn self-start w-10 h-10 flex items-center justify-center rounded-full border-2 border-gray-200 text-gray-400 hover:text-red-500 hover:border-red-500 transition-all duration-300"><i class="fa-solid fa-trash-can"></i></button>
+                <button class="deleteButton self-start w-10 h-10 flex items-center justify-center rounded-full border-2 border-gray-200 text-gray-400 hover:text-red-500 hover:border-red-500 transition-all duration-300"><i class="fa-solid fa-trash-can deleteButton"></i></button>
             </div>
 
-            <div class="flex justify-between bg-white shadow-md p-6 rounded-xl border border-gray-100 transition-all duration-300 hover:shadow-lg">
+             <div class="flex  logo justify-between bg-white shadow-md p-6 rounded-xl border border-gray-100 transition-all duration-300 hover:shadow-lg">
                 <div class="flex-1">
                     <h3 class="mobile text-[#002C5C] text-[24px] font-bold">CloudFirst Inc</h3>
                     <p class="React text-[#64748B] font-medium">Backend Developer</p>
@@ -90,10 +93,10 @@
                         <button class="RejectedButton px-4 py-1.5 text-sm font-bold border-2 border-red-500 text-red-500 rounded-md hover:bg-red-500 hover:text-white transition-all duration-300 uppercase">REJECTED</button>
                     </div>
                 </div>
-                <button class="deleteBtn self-start w-10 h-10 flex items-center justify-center rounded-full border-2 border-gray-200 text-gray-400 hover:text-red-500 hover:border-red-500 transition-all duration-300"><i class="fa-solid fa-trash-can"></i></button>
+                <button class="deleteButton self-start w-10 h-10 flex items-center justify-center rounded-full border-2 border-gray-200 text-gray-400 hover:text-red-500 hover:border-red-500 transition-all duration-300"><i class="fa-solid fa-trash-can deleteButton"></i></button>
             </div>
 
-            <div class="flex justify-between bg-white shadow-md p-6 rounded-xl border border-gray-100 transition-all duration-300 hover:shadow-lg">
+            <div class="flex  logo justify-between bg-white shadow-md p-6 rounded-xl border border-gray-100 transition-all duration-300 hover:shadow-lg">
                 <div class="flex-1">
                     <h3 class="mobile text-[#002C5C] text-[24px] font-bold">Innovation Labs</h3>
                     <p class="React text-[#64748B] font-medium">UI/UX Engineer</p>
@@ -105,10 +108,10 @@
                         <button class="RejectedButton px-4 py-1.5 text-sm font-bold border-2 border-red-500 text-red-500 rounded-md hover:bg-red-500 hover:text-white transition-all duration-300 uppercase">REJECTED</button>
                     </div>
                 </div>
-                <button class="deleteBtn self-start w-10 h-10 flex items-center justify-center rounded-full border-2 border-gray-200 text-gray-400 hover:text-red-500 hover:border-red-500 transition-all duration-300"><i class="fa-solid fa-trash-can"></i></button>
+                <button class="deleteButton self-start w-10 h-10 flex items-center justify-center rounded-full border-2 border-gray-200 text-gray-400 hover:text-red-500 hover:border-red-500 transition-all duration-300"><i class="fa-solid fa-trash-can deleteButton"></i></button>
             </div>
 
-            <div class="flex justify-between bg-white shadow-md p-6 rounded-xl border border-gray-100 transition-all duration-300 hover:shadow-lg">
+            <div class="flex  logo justify-between bg-white shadow-md p-6 rounded-xl border border-gray-100 transition-all duration-300 hover:shadow-lg">
                 <div class="flex-1">
                     <h3 class="mobile text-[#002C5C] text-[24px] font-bold">MegaCorp Solutions</h3>
                     <p class="React text-[#64748B] font-medium">JavaScript Developer</p>
@@ -120,10 +123,10 @@
                         <button class="RejectedButton px-4 py-1.5 text-sm font-bold border-2 border-red-500 text-red-500 rounded-md hover:bg-red-500 hover:text-white transition-all duration-300 uppercase">REJECTED</button>
                     </div>
                 </div>
-                <button class="deleteBtn self-start w-10 h-10 flex items-center justify-center rounded-full border-2 border-gray-200 text-gray-400 hover:text-red-500 hover:border-red-500 transition-all duration-300"><i class="fa-solid fa-trash-can"></i></button>
+                <button class="deleteButton self-start w-10 h-10 flex items-center justify-center rounded-full border-2 border-gray-200 text-gray-400 hover:text-red-500 hover:border-red-500 transition-all duration-300"><i class="fa-solid fa-trash-can deleteButton"></i></button>
             </div>
 
-            <div class="flex justify-between bg-white shadow-md p-6 rounded-xl border border-gray-100 transition-all duration-300 hover:shadow-lg">
+            <div class="flex  logo justify-between bg-white shadow-md p-6 rounded-xl border border-gray-100 transition-all duration-300 hover:shadow-lg">
                 <div class="flex-1">
                     <h3 class="mobile text-[#002C5C] text-[24px] font-bold">TechCorp Industries</h3>
                     <p class="React text-[#64748B] font-medium">Senior Frontend Developer</p>
@@ -135,10 +138,10 @@
                         <button class="RejectedButton px-4 py-1.5 text-sm font-bold border-2 border-red-500 text-red-500 rounded-md hover:bg-red-500 hover:text-white transition-all duration-300 uppercase">REJECTED</button>
                     </div>
                 </div>
-                <button class="deleteBtn self-start w-10 h-10 flex items-center justify-center rounded-full border-2 border-gray-200 text-gray-400 hover:text-red-500 hover:border-red-500 transition-all duration-300"><i class="fa-solid fa-trash-can"></i></button>
+                <button class="deleteButton self-start w-10 h-10 flex items-center justify-center rounded-full border-2 border-gray-200 text-gray-400 hover:text-red-500 hover:border-red-500 transition-all duration-300"><i class="fa-solid fa-trash-can deleteButton"></i></button>
             </div>
 
-            <div class="flex justify-between bg-white shadow-md p-6 rounded-xl border border-gray-100 transition-all duration-300 hover:shadow-lg">
+            <div class="flex  logo justify-between bg-white shadow-md p-6 rounded-xl border border-gray-100 transition-all duration-300 hover:shadow-lg">
                 <div class="flex-1">
                     <h3 class="mobile text-[#002C5C] text-[24px] font-bold">StartupXYZ</h3>
                     <p class="React text-[#64748B] font-medium">Full Stack Engineer</p>
@@ -150,27 +153,41 @@
                         <button class="RejectedButton px-4 py-1.5 text-sm font-bold border-2 border-red-500 text-red-500 rounded-md hover:bg-red-500 hover:text-white transition-all duration-300 uppercase">REJECTED</button>
                     </div>
                 </div>
-                <button class="deleteBtn self-start w-10 h-10 flex items-center justify-center rounded-full border-2 border-gray-200 text-gray-400 hover:text-red-500 hover:border-red-500 transition-all duration-300"><i class="fa-solid fa-trash-can"></i></button>
+                <button class="deleteButton self-start w-10 h-10 flex items-center justify-center rounded-full border-2 border-gray-200 text-gray-400 hover:text-red-500 hover:border-red-500 transition-all duration-300"><i class="fa-solid fa-trash-can deleteButton"></i></button>
             </div>
 
-            <div class="flex justify-between bg-white shadow-md p-6 rounded-xl border border-gray-100 transition-all duration-300 hover:shadow-lg">
+            <div class="flex  logo justify-between bg-white shadow-md p-6 rounded-xl border border-gray-100 transition-all duration-300 hover:shadow-lg">
                 <div class="flex-1">
                     <h3 class="mobile text-[#002C5C] text-[24px] font-bold">DataViz Solutions</h3>
                     <p class="React text-[#64748B] font-medium">Data Visualization Specialist</p>
                     <p class="Remote text-[#64748B] mt-2 mb-2 text-sm italic">Boston, MA • Full-time• $125000 - $165,000</p>
                     <p class="applicable text-green-500 mt-2 mb-4 w-fit px-3 py-1 text-xs font-bold border-2 border-green-100 bg-green-50 rounded uppercase">Not applied</p>
-                    <p class="Build text-[#64748B] text-sm mb-6">Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.
-</p>
+                    <p class="Build text-[#64748B] text-sm mb-6">Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.</p>
                     <div class="flex gap-3">
                         <button class="interviewButton px-4 py-1.5 text-sm font-bold border-2 border-green-500 text-green-500 rounded-md hover:bg-green-500 hover:text-white transition-all duration-300 uppercase">INTERVIEW</button>
                         <button class="RejectedButton px-4 py-1.5 text-sm font-bold border-2 border-red-500 text-red-500 rounded-md hover:bg-red-500 hover:text-white transition-all duration-300 uppercase">REJECTED</button>
                     </div>
                 </div>
-                <button class="deleteBtn self-start w-10 h-10 flex items-center justify-center rounded-full border-2 border-gray-200 text-gray-400 hover:text-red-500 hover:border-red-500 transition-all duration-300"><i class="fa-solid fa-trash-can"></i></button>
+                <button class="deleteButton self-start w-10 h-10 flex items-center justify-center rounded-full border-2 border-gray-200 text-gray-400 hover:text-red-500 hover:border-red-500 transition-all duration-300"><i class="fa-solid fa-trash-can deleteButton"></i></button>
             </div>
+            
         </section>
-    </main>
+        <section id="interview-container" class="hidden space-y-6"></section>
+        <section id="rejected-container" class="hidden space-y-6"></section>
 
-    <script src="./projest.js"></script>
+        <div id="empty-state" class="flex-col text-center items-center justify-center space-y-4 mt-[50px]">
+            <div class="flex text-center items-center justify-center"><img src="jobs.png"></div>
+             <div>
+                <p class=" text-[19px]">No jobs available</p>
+                <p class="text-[#64748B]">Check back soon for new job opportunities</p>
+            </div>
+        </div>
+
+
+        </div>
+    </main>
+    
+    
+    <script src="./project.js"></script>
 </body>
 </html>
